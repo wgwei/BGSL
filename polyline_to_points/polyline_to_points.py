@@ -80,8 +80,13 @@ class PolylineShape():
             i = i+1
         return points    # point list as: [(x1, y1), (x2, y2), (x3, y3)...]       
            
-def split_polyline_to_points(shapeFileName, distance, newPointShapeFileName):
-    pobj = PolylineShape(shapeFileName)
+def split_polyline_to_points(lineShapeFileName, distance, newPointShapeFileName):
+    ''' main function to split a polyline to points
+        lineShapeFileName = shape file name of the poly line
+        distance = distance between two points
+        newPointShapeFileName = file name of the generated points
+    '''
+    pobj = PolylineShape(lineShapeFileName)
     pointlist = pobj.polyShape_to_points_by_eqDist(distance)
     pobj.write_point_shape_out(newPointShapeFileName, pointlist)
                 
