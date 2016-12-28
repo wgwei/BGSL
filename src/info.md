@@ -6,7 +6,7 @@ $sudo apt install cython
 
 $cython -a filename.pyx
 
-#create a setup.py file as shown in src
+create a setup.py file as shown in src
 
 $python setup.py build_ext --inplace
 
